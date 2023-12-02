@@ -1,0 +1,118 @@
+//1.ACCEPT ONE NUMBER FROM USER AND PRINT NUMBER OF * ON SCREEN
+# include<stdio.h>
+void Display(int iNo)
+{ int iCnt  = 0;
+  for(iCnt = 1;iCnt<=iNo;iCnt++)
+ {
+    printf("*");
+   }
+}
+int main()
+{   int iValue = 0;
+printf("ENTER NUMBER\n");
+scanf("%d",&iValue);
+Display(iValue);
+   return 0;
+}
+// 2.ACCEPT ONE NUMBER FROM USER AND PRINT NUMBER OF * ON SCREEN
+# include<stdio.h>
+void Display(int iNo)
+{
+  while(iNo>0)
+  {
+        printf("*");
+        iNo--;
+    } 
+}
+int main()
+{
+ int iValue = 0;
+  printf("ENTER NUMBER");
+  scanf("%d",&iValue);
+    Display(iValue);
+    return 0;
+}
+
+//3.ACCEPT  ONE NUMBER FROM USER IF NUMBER IS LESS THAN 10 THEN PRINT "HELLO "otherwise print "Dem"
+# include<stdio.h>
+void Display(int iNo)
+{  if(iNo<10)
+    {
+        printf("Hello");
+    }
+    else
+    {
+        printf("Demo");
+    }
+}
+int main()
+{  int iValue = 0;
+  printf("ENTER NUMBER");
+ scanf("%d",&iValue);
+Display(iValue);
+return 0;
+}
+//4.ACCEPT TWO NUMBER FROM USER AND DISPLAY FIRST NUMBER IN SECOND NUMBER OF TIMES
+# include<stdio.h>
+void Display(int iNo,int iFrequency)
+{
+    int iCnt = 0;
+
+  for(iCnt = 1;iCnt<=iFrequency;iCnt++)
+  {
+    printf("%d\t",iNo);
+  }
+    
+}int main()
+{
+    int iValue = 0;
+    int iCount = 0;
+
+    printf("ENTER NUBER");
+    scanf("%d",&iValue);
+    printf("ENTER FREQUENCY");
+    scanf("%d",&iCount);
+    Display(iValue,iCount);
+    return 0;
+}
+//5.ACCEPT NUMBER FROM USER AND CHECK WHETHER NUMBER IS EVEN OR ODD
+# include<stdio.h>
+#define TRUE 1
+#define FALSE 0
+
+typedef int BOOL ;
+BOOL ChkEven(int iNo)
+{
+    if((iNo % 2)==0)
+    {
+        return TRUE;
+    }
+    else
+    {
+    return FALSE;
+    }
+}
+
+
+
+int main()
+{
+    int iValue = 0;
+    BOOL bRet = FALSE;
+    printf("ENTER NUMBER");
+
+    scanf("%d",&iValue);
+    bRet = ChkEven(iValue);
+
+    if(bRet == TRUE)
+    {
+        printf("%d number is even",iValue);
+
+    }
+    else
+    {
+        printf("%d number is odd",iValue);
+    }
+
+    return 0;
+}
